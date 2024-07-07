@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <table class="table table-success table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>T/r</th>
+                <th>Ism</th>
+                <th>Familiya</th>
+                <th>Email</th>
+                <th>Telefon raqam</th>
+                <th>Xabar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contact_list %}
+            <tr>
+                <td>{{ contact.pk}}</td>
+                <td>{{ contact.firstname}}</td>
+                <td>{{ contact.lastname}}</td>
+                <td>{{ contact.sender}}</td>
+                <td>{{ contact.phone}}</td>
+                <td>{{ contact.message}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2>Maydonlarni to'ldiring va yuborish tugmasini bosing</h2>
+    <form action="" method="post">{% csrf_token %}
+        {{form | crispy}}
+        <input type="submit" value="Yuborish" class="btn btn-success">
+    </form>
+{% endblock content %}
